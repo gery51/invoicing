@@ -1,0 +1,6 @@
+﻿{
+    "name"    : "register",    
+    "html"    : "register.html",
+    "styles"  : ["register.css"],
+    "scripts" : ["register.js"]
+}
