@@ -1,1 +1,1 @@
-﻿﻿
+﻿//Methods(Entity Methods, Collection Methods, Datastore Class Methods), Events (Attribute Events, Datastore Class Events, Calculated Attributes)model.Registration = {};//*** METHODS//model.XXXX.entityMethods = {};//model.XXXX.collectionMethods = {};model.Registration.methods = {};model.Registration.methods.newRegistration = function(regObject){	}model.Registration.methods.newRegistration.scope = 'public';//*** EVENTS//model.XXXX.attributeName = {};//model.XXXX.attributeName.events = {};//model.XXXX.events = {};//Calcuated attributes
