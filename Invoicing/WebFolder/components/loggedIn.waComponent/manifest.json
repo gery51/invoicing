@@ -1,6 +1,1 @@
-﻿{
-    "name"    : "loggedIn",    
-    "html"    : "loggedIn.html",
-    "styles"  : ["loggedIn.css"],
-    "scripts" : ["loggedIn.js"]
-}
+﻿{"name":"loggedIn","html":"loggedIn.html","scripts":["loggedIn.js"],"styles":["loggedIn.css"]}
