@@ -1,1 +1,1 @@
-﻿include('scripts/WAKLIB_Server.js'); //Utility library - open source (www.waklib.com)IN = {}; //Set up our application namespace on the server side//include('scripts/language/en.js'); //english//include('scripts/language/fr.js'); //english//debugger;
+﻿include('scripts/WAKLIB_Server.js'); //Utility library - open source (www.waklib.com)IN = {}; //Set up our application namespace on the server sideinclude('scripts/language/en.js'); //english is default language - changes on login if needed
