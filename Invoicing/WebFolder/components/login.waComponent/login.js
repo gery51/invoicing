@@ -20,11 +20,13 @@ function constructor (id) {
 
 	loginButton.click = function loginButton_click (event)// @startlock
 	{// @endlock
+		//login using provided credentials from input widgets
 		WAF.directory.login($$(getHtmlId('usernameInput')).getValue(), $$(getHtmlId('passwordInput')).getValue(), {
 			onSuccess: function(event){
 				debugger;
 			},
 			onError: function(err){
+				//TODO: bug? Why is this firing? Error is not descriptive
 				debugger;
 			}
 		});
