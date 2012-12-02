@@ -1,1 +1,1 @@
-﻿var dsProj = solution.getApplicationByName("Invoicing").ds;debugger;var theUser = dsProj.User({userName: userName});theUser;
+﻿//Delete all//ds.Account.remove();//ds.Company.remove();//ds.Person.remove();//ds.Registration.remove();//ds.User.remove();//ds.Group.remove();loginByPassword('h','h');currentSession().belongsTo('AccountOwner');
