@@ -1,0 +1,1 @@
+﻿IN = {}; //Declare application namespace

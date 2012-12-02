@@ -11,7 +11,15 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
+	//set the text beside the login button
+	IN.userSettings = ds.User.getSettings();
+	
+	debugger;
+	//Set UI strings
+	$.getScript('customScripts/languages/' + IN.userSettings.language + '.js', function(){
+		alert('loaded' + IN.userSettings.language + '.js');
 
+	});
 	// @region namespaceDeclaration// @startlock
 	// @endregion// @endlock
 

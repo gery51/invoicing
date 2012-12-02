@@ -11,7 +11,8 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-
+	
+	$$(getHtmlId('userText')).setValue('Logged in as ' + WAF.directory.currentUser().fullName); //TODO: multi language
 	// @region namespaceDeclaration// @startlock
 	var button1 = {};	// @button
 	// @endregion// @endlock

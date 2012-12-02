@@ -1,0 +1,1 @@
+﻿IN.strings = {};IN.strings.greeting = 'bonjour';
