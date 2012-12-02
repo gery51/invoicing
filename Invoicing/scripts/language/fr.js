@@ -1,1 +1,1 @@
-﻿IN.test = {hello: 'bonjour'}
+﻿IN.strings.dashboardName = 'Le Dashboard';

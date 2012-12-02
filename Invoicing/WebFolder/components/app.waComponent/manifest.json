@@ -1,6 +1,1 @@
-﻿{
-    "name"    : "app",    
-    "html"    : "app.html",
-    "styles"  : ["app.css"],
-    "scripts" : ["app.js"]
-}
+﻿{"name":"app","html":"app.html","scripts":["app.js"],"styles":["app.css"]}

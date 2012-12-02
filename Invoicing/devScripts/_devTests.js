@@ -1,1 +1,1 @@
-﻿//Delete all//ds.Account.remove();//ds.Company.remove();//ds.Person.remove();//ds.Registration.remove();//ds.User.remove();//ds.Group.remove();loginByPassword('h','h');currentSession().belongsTo('AccountOwner');
+﻿//Delete allds.Account.remove();ds.Company.remove();ds.Person.remove();ds.Registration.remove();ds.User.remove();ds.Group.remove();
