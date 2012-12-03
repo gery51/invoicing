@@ -15,14 +15,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		var vMinH = 600;
 		$(window).resize(function(){
 			if($(window).height() < vMinH){
-				$$(CF.widgets.page).addClass('minHeight');
+				$$('page').addClass('minHeight');
 			} else {
-				$$(CF.widgets.page).removeClass('minHeight');
+				$$('page').removeClass('minHeight');
 			}
 			if($(window).width() < vMinW){
-				$$(CF.widgets.page).addClass('minWidth');
+				$$('page').addClass('minWidth');
 			} else {
-				$$(CF.widgets.page).removeClass('minWidth');
+				$$('page').removeClass('minWidth');
 			}
 		});
 		$(window).resize();
