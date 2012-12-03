@@ -14,10 +14,10 @@ function constructor (id) {
 	//set the text beside the login button
 	IN.userSettings = ds.User.getSettings();
 	
-	debugger;
 	//Set UI strings
 	$.getScript('customScripts/languages/' + IN.userSettings.language + '.js', function(){
-		alert('loaded' + IN.userSettings.language + '.js');
+		//set strings on interface page
+		$$(getHtmlId('languageTest')).setValue(IN.strings.greeting);
 
 	});
 	// @region namespaceDeclaration// @startlock

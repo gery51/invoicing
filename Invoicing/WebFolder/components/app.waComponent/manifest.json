@@ -1,1 +1,1 @@
-﻿{"name":"app","html":"app.html","scripts":["app.js"],"styles":["app.css"]}
+﻿{"name":"app","html":"app.html","scripts":["app.js","applicationPrivate.js"],"styles":["app.css"]}

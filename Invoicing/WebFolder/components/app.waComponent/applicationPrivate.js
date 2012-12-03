@@ -1,1 +1,1 @@
-﻿IN = {};
+﻿//Global application code needed after login
