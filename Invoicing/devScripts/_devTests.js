@@ -1,1 +1,1 @@
-﻿//Delete allds.Account.remove();ds.Company.remove();ds.Person.remove();ds.Registration.remove();ds.User.remove();ds.Group.remove();
+﻿//Delete all//ds.Account.remove();//ds.Company.remove();//ds.Person.remove();//ds.Registration.remove();//ds.User.remove();//ds.Group.remove();loginByPassword('gavin','hello');currentSession();

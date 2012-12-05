@@ -25,7 +25,18 @@ function constructor (id) {
 		
 		if(validated){
 			//run the registration method on the server
-			ds.Registration.newRegistration(WAKLIB.utils.datasourceToObject($comp.sources.regObject));
+			ds.Registration.newRegistration(WAKLIB.utils.datasourceToObject($comp.sources.regObject), {
+				onSuccess: function(event){
+					if(event.result === true){
+						window.location = 'index.html';
+					} else {
+						//did not register for whatever reason
+					}
+				},
+				onError: function(err){
+					//server connection failed
+				}
+			});
 		} else {
 			
 		}

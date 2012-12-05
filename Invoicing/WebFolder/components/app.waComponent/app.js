@@ -21,11 +21,25 @@ function constructor (id) {
 
 	});
 	// @region namespaceDeclaration// @startlock
+	var staffButton = {};	// @button
+	var clientsButton = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
+	staffButton.click = function staffButton_click (event)// @startlock
+	{// @endlock
+		$$(getHtmlId('peopleTabComp')).loadComponent('components/staff.waComponent');
+	};// @lock
+
+	clientsButton.click = function clientsButton_click (event)// @startlock
+	{// @endlock
+		$$(getHtmlId('peopleTabComp')).loadComponent('components/clients.waComponent');
+	};// @lock
+
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_staffButton", "click", staffButton.click, "WAF");
+	WAF.addListener(this.id + "_clientsButton", "click", clientsButton.click, "WAF");
 	// @endregion// @endlock
 
 	};// @lock
