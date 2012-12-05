@@ -13,11 +13,18 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 
 	// @region namespaceDeclaration// @startlock
+	var saveButton = {};	// @button
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
 
+	saveButton.click = function saveButton_click (event)// @startlock
+	{// @endlock
+		$comp.sources.user.save();
+	};// @lock
+
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_saveButton", "click", saveButton.click, "WAF");
 	// @endregion// @endlock
 
 	};// @lock

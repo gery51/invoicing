@@ -16,8 +16,8 @@ function constructor (id) {
 	
 	//Set UI strings
 	$.getScript('customScripts/languages/' + IN.userSettings.language + '.js', function(){
-		//set strings on interface page
-		$$(getHtmlId('languageTest')).setValue(IN.strings.greeting);
+		//set strings on interface page using variables from language file
+		//TODO: do this
 
 	});
 	// @region namespaceDeclaration// @startlock
