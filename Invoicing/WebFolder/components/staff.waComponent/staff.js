@@ -11,7 +11,7 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	this.load = function (data) {// @lock
-
+alert('loaded');
 	// @region namespaceDeclaration// @startlock
 	var saveButton = {};	// @button
 	// @endregion// @endlock
@@ -20,7 +20,15 @@ function constructor (id) {
 
 	saveButton.click = function saveButton_click (event)// @startlock
 	{// @endlock
-		$comp.sources.user.save();
+		debugger;
+		$comp.sources.user.save({
+			onSuccess: function(event){
+				debugger;
+			},
+			onError: function(err){
+				debugger;
+			}
+		});
 	};// @lock
 
 	// @region eventManager// @startlock
