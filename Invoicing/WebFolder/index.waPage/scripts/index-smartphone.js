@@ -2,6 +2,10 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var dataGrid2 = {};	// @dataGrid
+	var overViewButton = {};	// @button
+	var backbutton1 = {};	// @button
+	var projectSaveButton = {};	// @button
 	var newProjectButton = {};	// @button
 	var addTimerButton = {};	// @icon
 	var timerListButton = {};	// @icon
@@ -17,10 +21,38 @@ if(WAF.directory.currentUser() !== null){
 }
 // eventHandlers// @lock
 
+	dataGrid2.onRowClick = function dataGrid2_onRowClick (event)// @startlock
+	{// @endlock
+		$$('mainNavigation').goToView(8);
+	};// @lock
+
+	overViewButton.click = function overViewButton_click (event)// @startlock
+	{// @endlock
+		$$('mainNavigation').goToView(2);
+	};// @lock
+
+	backbutton1.click = function backbutton1_click (event)// @startlock
+	{// @endlock
+		if($$('mainNavigation').visibleView === "1"){
+			//Back button to the login view
+			WAF.directory.logout();
+		}
+
+	};// @lock
+
+	projectSaveButton.click = function projectSaveButton_click (event)// @startlock
+	{// @endlock
+		sources.project.save({
+			onSuccess: function(event){
+				debugger;
+				$$('mainNavigation').goToPreviousView();
+			}	
+		});
+	};// @lock
+
 	newProjectButton.click = function newProjectButton_click (event)// @startlock
 	{// @endlock
-		alert('hello');
-		sources.project.createNewElement();
+		sources.project.addNewElement();
 		$$('mainNavigation').goToView(8);
 	};// @lock
 
@@ -67,6 +99,8 @@ if(WAF.directory.currentUser() !== null){
 			onSuccess: function(event){
 				if(event.result === true){
 					//login successful
+					$$('usernameInput').setValue(''); //Clear both input fields
+					$$('passwordInput').setValue('');
 					$$('mainNavigation').goToView(2);
 				} else {
 					//login unsuccessful
@@ -79,6 +113,10 @@ if(WAF.directory.currentUser() !== null){
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("dataGrid2", "onRowClick", dataGrid2.onRowClick, "WAF");
+	WAF.addListener("overViewButton", "click", overViewButton.click, "WAF");
+	WAF.addListener("backbutton1", "click", backbutton1.click, "WAF");
+	WAF.addListener("projectSaveButton", "click", projectSaveButton.click, "WAF");
 	WAF.addListener("newProjectButton", "click", newProjectButton.click, "WAF");
 	WAF.addListener("addTimerButton", "click", addTimerButton.click, "WAF");
 	WAF.addListener("timerListButton", "click", timerListButton.click, "WAF");
