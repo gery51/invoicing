@@ -21,21 +21,16 @@ function constructor (id) {
 	loginButton.click = function loginButton_click (event)// @startlock
 	{// @endlock
 		//login using provided credentials from input widgets
-//		WAF.directory.login($$(getHtmlId('usernameInput')).getValue(), $$(getHtmlId('passwordInput')).getValue(), {
-//			onSuccess: function(event){
-//				console.log('success');
-//				debugger;
-//			},
-//			onError: function(err){
-//				//TODO: bug? Why is this firing? Error is not descriptive
-//				console.log('failed');
-//				debugger;
-//			}
-//		});
-		//TODO: call async as above when I figure out what's wrong with it
-		WAF.directory.login($$(getHtmlId('usernameInput')).getValue(), $$(getHtmlId('passwordInput')).getValue());
+		WAF.directory.login($$(getHtmlId('usernameInput')).getValue(), $$(getHtmlId('passwordInput')).getValue(), {
+			onSuccess: function(event){
+				window.location = '/index';
+			},
+			onError: function(err){
+				//TODO: bug? Why is this firing? Error is not descriptive
+				console.log('failed');
+			}
+		});
 		
-		window.location = 'index.html';
 	};// @lock
 
 	// @region eventManager// @startlock

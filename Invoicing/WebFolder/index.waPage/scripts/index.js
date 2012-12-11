@@ -28,11 +28,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$(window).resize();
 		
 		if(WAF.directory.currentUser() == null){
-			$$('page').loadComponent('components/register.waComponent');
-			$$('login').loadComponent('components/login.waComponent');
+			$$('page').loadComponent('/components/register.waComponent');
+			$$('login').loadComponent('/components/login.waComponent');
 		} else {
-			$$('page').loadComponent('components/app.waComponent');
-			$$('login').loadComponent('components/loggedIn.waComponent');
+			$$('page').loadComponent('/components/app.waComponent');
+			$$('login').loadComponent('/components/loggedIn.waComponent');
 		}
 	};// @lock
 
